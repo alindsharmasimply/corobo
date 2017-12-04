@@ -316,8 +316,14 @@ class LabHub(BotPlugin):
             '- You must be a member of {} org to be assigned an issue '
             'If you are not a member yet, just type Hello World and '
             'corobo will invite you.'.format(self.GH_ORG_NAME),
-            '- A newcomer cannot be assigned to an issue with a difficulty '
+            '- A newcomer who hasn\'t solved any issue '
+            'or has solved just one out of the newcomer '
+            'and low difficulty issues, '
+            'cannot be assigned to an issue with a difficulty '
             'level higher than newcomer or low difficulty.',
+            '- A newcomer who has solved a newcomer difficulty issue '
+            'has to solve a low difficulty issue and vice versa, '
+            'in order to proceed further.',
             '- A newcomer cannot be assigned to unlabelled issues.'
         ]
 
